@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function MovieItem() {
+export default function MovieItems() {
     return (
         <div className="movie-item">
             <div className="mv-img">

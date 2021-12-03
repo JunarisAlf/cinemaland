@@ -1,0 +1,27 @@
+.my-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.my-movie-item {
+    /* position: relative; */
+    /* width: 24%;
+    height: 200;
+    max-width: 300;
+    max-height: 200; */
+    margin: 10px auto 10px 0 !important;
+    /* margin-bottom: 10 !important; */
+}
+.my-image-fill {
+    object-fit: fill;
+}
+.movie-item-style-2 {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+}
+.my-mv-item-infor {
+    margin: 0 20px !important;
+    max-width: 1000px !important;
+    width: 100% !important;
+}

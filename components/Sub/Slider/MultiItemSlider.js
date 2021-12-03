@@ -1,4 +1,4 @@
-import MovieItem from '../MovieCatalog/Main/MovieItem';
+import MovieItems from './MovieItems';
 
 export default function MultiItemSlider() {
     const data = [
@@ -14,7 +14,7 @@ export default function MultiItemSlider() {
     return (
         <div className="slick-multiItemSlider">
             {data.map((item) => (
-                <MovieItem key={item.dummy} />
+                <MovieItems key={item.dummy} />
             ))}
         </div>
     );

@@ -1,4 +1,5 @@
 import '../styles/global.css';
+import '../styles/costom.css';
 
 import App from '../components/App';
 import Head from 'next/head';
