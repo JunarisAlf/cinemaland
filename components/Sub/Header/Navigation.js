@@ -18,7 +18,7 @@ export default function Navigation() {
                 <a href="index.html">
                     <img
                         className="logo"
-                        src="images/logo1.png"
+                        src="/images/logo1.png"
                         alt=""
                         width="119"
                         height="58"

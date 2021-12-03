@@ -25,3 +25,9 @@
     max-width: 1000px !important;
     width: 100% !important;
 }
+
+.movie-single {
+    margin: 0 !important;
+    padding-top: 200px !important;
+    position: relative !important;
+}

@@ -4,7 +4,7 @@ export default function MovieItems() {
             <div className="mv-img">
                 <a href="#">
                     <img
-                        src="images/uploads/slider1.jpg"
+                        src="/images/uploads/slider1.jpg"
                         alt=""
                         width="285"
                         height="437"
