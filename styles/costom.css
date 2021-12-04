@@ -16,7 +16,8 @@
 .my-image-fill {
     object-fit: fill;
 }
-.movie-item-style-2 {
+
+.my-movie-item-style-2 {
     flex-direction: row !important;
     align-items: flex-start !important;
 }
@@ -30,4 +31,18 @@
     margin: 0 !important;
     padding-top: 200px !important;
     position: relative !important;
+}
+
+@media (max-width: 767px) {
+    .my-movie-item-style-1 {
+        margin-left: 15px !important;
+        max-width: 133px !important;
+    }
+    .my-hvr-inner {
+        padding: 5px 10px !important;
+        margin-top: 90px !important;
+    }
+    .my-hvr-inner > a {
+        font-size: 10px !important;
+    }
 }

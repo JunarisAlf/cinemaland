@@ -4460,11 +4460,11 @@ ul {
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 }
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .movie-item-style-1 .hvr-inner {
         margin-left: 0;
     }
-}
+} */
 .movie-item-style-1 .hvr-inner a {
     font-family: 'Dosis', sans-serif;
     font-size: 14px;
@@ -4515,7 +4515,7 @@ ul {
     display: -ms-flexbox;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     align-items: inherit;
     margin-right: -30px;
@@ -4536,11 +4536,11 @@ ul {
         max-width: 100%;
     }
 }
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .mv-grid-fw {
         max-width: 200px;
     }
-}
+} */
 .grid-fav .movie-item-style-2 {
     margin-right: 15px;
 }
@@ -5773,7 +5773,7 @@ ul {
 }
 .common-hero {
     height: 385px;
-    background: url('../public/images/uploads/user-hero-bg.jpg') no-repeat;
+    background-color: #020d18;
 }
 .common-hero:before {
     background-color: rgba(0, 0, 0, 0.4);

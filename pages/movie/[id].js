@@ -3,7 +3,7 @@ import Header from '../../components/Core/Header';
 import Head from 'next/head';
 import MovieSingleDetail from '../../components/Core/MovieSingleDetail';
 
-export default function Home() {
+export default function Movie() {
     return (
         <div>
             <Head>

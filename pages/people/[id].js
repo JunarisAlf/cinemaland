@@ -3,7 +3,7 @@ import Header from '../../components/Core/Header';
 import Head from 'next/head';
 import PeopleSingleDetail from '../../components/Core/PeopleSingleDetail';
 
-export default function Home() {
+export default function People() {
     return (
         <div>
             <Head>
