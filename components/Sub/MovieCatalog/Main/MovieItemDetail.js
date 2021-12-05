@@ -8,6 +8,7 @@ export default function MovieItemDetail({ datas }) {
                     className="movie-item-style-2 my-movie-item-style-2"
                 >
                     <img
+                        className="filter"
                         src={
                             'https://image.tmdb.org/t/p/original' +
                             movie.poster_path

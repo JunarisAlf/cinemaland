@@ -13,14 +13,28 @@
     margin: 10px auto 10px 0 !important;
     /* margin-bottom: 10 !important; */
 }
-.my-image-fill {
-    object-fit: fill;
-}
-
 .my-movie-item-style-2 {
     flex-direction: row !important;
     align-items: flex-start !important;
 }
+@media (max-width: 400px){
+    .my-movie-item{
+        margin: 15px 0  15px 0 !important;
+    }
+    .my-container{
+        justify-content: center !important;
+    }
+   .my-movie-item-style-2{
+       flex-direction: column !important;
+        align-items: center !important;
+
+   }
+}
+.my-image-fill {
+    object-fit: fill;
+}
+
+
 .my-mv-item-infor {
     margin: 0 20px !important;
     max-width: 1000px !important;
@@ -54,9 +68,12 @@
 .my-mv-image {
     filter: brightness(80%);
 }
+.filter{
+    filter: brightness(80%);
 
+}
 @media (max-width: 488px) {
     .slick-dots {
-        display: none;
+        display: none !important;
     }
 }

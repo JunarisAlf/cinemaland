@@ -3,6 +3,7 @@ export default function MovieItem({ movie }) {
         <div className="movie-item my-movie-item">
             <div className="mv-img">
                 <img
+                    className="filter"
                     src={
                         'https://image.tmdb.org/t/p/original' +
                         movie.poster_path
