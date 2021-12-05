@@ -1,16 +1,20 @@
 import React from 'react';
 import MovieItemDetail from './MovieItemDetail';
 import Tab from './Tab';
-import Title from './Title';
 
-export default function Main() {
+export default function Main({ datas }) {
+    const {bestByGenreDatas, topRatedDatas} = datas;
     return (
         <div className="col-md-8">
-            <Title />
-            <Tab />
+            <div className="title-hd">
+                <h2>BEST MOVIE BY GENRES</h2>
+            </div>
+            <Tab datas={bestByGenreDatas} />
 
-            <Title />
-            <MovieItemDetail />
+            <div className="title-hd">
+                <h2>TOP RATED</h2>
+            </div>
+            <MovieItemDetail datas={topRatedDatas}/>
         </div>
     );
 }

@@ -1,28 +1,33 @@
-export default function MovieItems() {
+// import Image from 'next/image';
+export default function MovieItems({ movie }) {
     return (
         <div className="movie-item">
             <div className="mv-img">
                 <a href="#">
                     <img
-                        src="/images/uploads/slider1.jpg"
+                        className="my-mv-image"
+                        src={
+                            'https://image.tmdb.org/t/p/original' +
+                            movie.poster_path
+                        }
                         alt=""
-                        width="285"
-                        height="437"
+                        width={285}
+                        height={437}
                     />
                 </a>
             </div>
             <div className="title-in">
                 <div className="cate">
                     <span className="blue">
-                        <a href="#">Sci-fi</a>
+                        <a href="#">{movie.genre}</a>
                     </span>
                 </div>
                 <h6>
-                    <a href="#">Interstellar</a>
+                    <a href="#">{movie.title.substring(0, 40)}</a>
                 </h6>
                 <p>
                     <i className="ion-android-star"></i>
-                    <span>7.4</span> /10
+                    <span>{movie.vote_average}</span> /10
                 </p>
             </div>
         </div>

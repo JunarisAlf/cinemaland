@@ -1,33 +1,33 @@
 import React from 'react';
 
-export default function Celebrities() {
-    const data = [1, 2, 3, 4, 5];
+export default function Celebrities({datas}) {
+    const peoples = datas.results;
     return (
-        <div className="celebrities">
+        <div  className="celebrities">
             <h4 className="sb-title">Spotlight Celebrities</h4>
-            {data.map((i) => (
-                <div key={i} className="celeb-item">
+            {peoples.map((people) => (
+                <div key={people.id} className="celeb-item">
                     <a href="#">
                         <img
-                            src="images/uploads/ava1.jpg"
+                           src={
+                            'https://image.tmdb.org/t/p/original' +
+                            people.profile_path
+                        }
                             alt=""
-                            width="70"
-                            height="70"
+                            width={70}
+                            height={70}
                         />
                     </a>
                     <div className="celeb-author">
                         <h6>
-                            <a href="#">Samuel N. Jack</a>
+                            <a href="#">{people.name}</a>
                         </h6>
-                        <span>Actor</span>
+                        <span>ACTOR</span>
                     </div>
                 </div>
             ))}
 
-            <a href="#" className="btn">
-                See all celebrities
-                <i className="ion-ios-arrow-right"></i>
-            </a>
+          
         </div>
     );
 }

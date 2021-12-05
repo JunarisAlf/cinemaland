@@ -50,3 +50,13 @@
 .my-flex-start {
     justify-content: flex-start !important;
 }
+
+.my-mv-image {
+    filter: brightness(80%);
+}
+
+@media (max-width: 488px) {
+    .slick-dots {
+        display: none;
+    }
+}

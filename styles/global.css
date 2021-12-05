@@ -4199,7 +4199,7 @@ ul {
     content: '';
 }
 .movie-items .movie-item img {
-    width: 100%;
+    /* width: 100%; */
     -webkit-transition: all 0.5s ease-out;
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;

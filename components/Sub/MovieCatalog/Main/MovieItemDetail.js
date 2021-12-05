@@ -1,39 +1,35 @@
-export default function MovieItemDetail() {
-    const data = [1, 2, 3, 4, 5, 6];
+export default function MovieItemDetail({ datas }) {
+    const movies = datas.results;
     return (
         <div>
-            {data.map((i) => (
-                <div className="movie-item-style-2 my-movie-item-style-2">
-                    <img src="images/uploads/mv1.jpg" alt="" />
+            {movies.map((movie) => (
+                <div
+                    key={movie.id}
+                    className="movie-item-style-2 my-movie-item-style-2"
+                >
+                    <img
+                        src={
+                            'https://image.tmdb.org/t/p/original' +
+                            movie.poster_path
+                        }
+                        alt=""
+                        width={185}
+                        height={284}
+                    />
                     <div className="mv-item-infor my-mv-item-infor">
                         <h6>
                             <a href="moviesingle.html">
-                                oblivion <span>(2012)</span>
+                                {movie.title}{' '}
+                                <span>
+                                    {movie.release_date.substring(0, 4)}
+                                </span>
                             </a>
                         </h6>
                         <p className="rate">
                             <i className="ion-android-star"></i>
-                            <span>8.1</span> /10
+                            <span>{movie.vote_average}</span> /10
                         </p>
-                        <p className="describe">
-                            Earth's mightiest heroes must come together and
-                            learn to fight as a team if they are to stop the
-                            mischievous Loki and his alien army from enslaving
-                            humanity...
-                        </p>
-                        <p className="run-time">
-                            {' '}
-                            Run Time: 2h21’ . <span>MMPA: PG-13 </span> .{' '}
-                            <span>Release: 1 May 2015</span>
-                        </p>
-                        <p>
-                            Director: <a href="#">Joss Whedon</a>
-                        </p>
-                        <p>
-                            Stars: <a href="#">Robert Downey Jr.,</a>{' '}
-                            <a href="#">Chris Evans,</a>{' '}
-                            <a href="#"> Chris Hemsworth</a>
-                        </p>
+                        <p className="describe">{movie.overview}</p>
                     </div>
                 </div>
             ))}
