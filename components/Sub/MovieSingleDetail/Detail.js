@@ -1,33 +1,35 @@
 import TabContent from './TabContent';
 
-export default function Detail() {
+export default function Detail({ movie, credits }) {
+    const vote = [...Array(parseInt(movie.vote_average)).keys()];
+    const downVote = [...Array(parseInt(10 - vote.length)).keys()];
+
     return (
         <div className="col-md-8 col-sm-12 col-xs-12">
             <div className="movie-single-ct main-content">
                 <h1 className="bd-hd">
-                    Skyfall: Quantum of Spectre <span>2015</span>
+                    {movie.title}{' '}
+                    <span>{movie.release_date.substring(0, 4)}</span>
                 </h1>
 
                 <div className="movie-rate">
                     <div className="rate">
                         <i className="ion-android-star"></i>
                         <p>
-                            <span>8.1</span> /10
+                            <span>{movie.vote_average}</span> /10
                             <br />
-                            <span className="rv">56 Reviews</span>
                         </p>
                     </div>
                     <div className="rate-star">
-                        <p>Rate This Movie:</p>
-                        <i className="ion-ios-star"></i>
-                        <i className="ion-ios-star"></i>
-                        <i className="ion-ios-star"></i>
-                        <i className="ion-ios-star"></i>
-                        <i className="ion-ios-star"></i>
-                        <i className="ion-ios-star"></i>
-                        <i className="ion-ios-star"></i>
-                        <i className="ion-ios-star"></i>
-                        <i className="ion-ios-star-outline"></i>
+                        <p>Rating:</p>
+                        <div className="star">
+                            {vote.map(() => (
+                                <i className="ion-ios-star"></i>
+                            ))}
+                            {downVote.map(() => (
+                                <i className="ion-ios-star-outline"></i>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
@@ -50,7 +52,7 @@ export default function Detail() {
                                 <a href="#moviesrelated">Related Movies</a>
                             </li>
                         </ul>
-                        <TabContent />
+                        <TabContent data={movie} credits={credits} />
                     </div>
                 </div>
             </div>

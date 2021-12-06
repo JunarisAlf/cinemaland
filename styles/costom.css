@@ -31,7 +31,8 @@
    }
 }
 .my-image-fill {
-    object-fit: fill;
+    object-fit: fill !important;
+    object-position: center;
 }
 
 
@@ -47,6 +48,17 @@
     position: relative !important;
 }
 
+.my-single-movie-img{
+    margin: 10px auto !important;
+    width: 90%;
+    /* height: 505px !important; */
+    max-width: 330px !important;
+    max-height: 550px !important;
+    overflow: hidden !important;
+}
+.my-img{
+    max-width:530px !important ;
+}
 @media (max-width: 767px) {
     .my-movie-item-style-1 {
         margin-left: 15px !important;
@@ -75,5 +87,21 @@
 @media (max-width: 488px) {
     .slick-dots {
         display: none !important;
+    }
+}
+@media (max-width: 620px) {
+    .my-single-movie-img{
+        margin: -80px auto 10px !important;
+    }
+}
+@media (max-width: 1000px) {
+    .bd-hd{
+        text-align: center;
+    }
+
+    .rate-star{
+        margin-top: 50px;
+        flex-direction: column;
+        justify-content: center;
     }
 }

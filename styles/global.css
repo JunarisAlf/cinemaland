@@ -6067,6 +6067,7 @@ ul {
 .movie-single .movie-img img,
 .movie-single .mv-ceb img {
     width: 100%;
+    max-width: 550px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;

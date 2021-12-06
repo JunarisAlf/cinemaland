@@ -9,7 +9,7 @@ export default function MovieItemDetail({ datas }) {
                 >
                     <img
                         className="filter"
-                        src={
+                        src={movie.poster_path == null ? '/images/uploads/mv.1' :
                             'https://image.tmdb.org/t/p/original' +
                             movie.poster_path
                         }
@@ -19,7 +19,7 @@ export default function MovieItemDetail({ datas }) {
                     />
                     <div className="mv-item-infor my-mv-item-infor">
                         <h6>
-                            <a href="moviesingle.html">
+                            <a href={'/movie/' + movie.id}>
                                 {movie.title}{' '}
                                 <span>
                                     {movie.release_date.substring(0, 4)}

@@ -4,7 +4,7 @@ export default function MovieItem({ movie }) {
             <div className="mv-img">
                 <img
                     className="filter"
-                    src={
+                    src={movie.poster_path == null ? '/images/uploads/mv-item1.jpg' :
                         'https://image.tmdb.org/t/p/original' +
                         movie.poster_path
                     }
@@ -14,14 +14,14 @@ export default function MovieItem({ movie }) {
                 />
             </div>
             <div className="hvr-inner">
-                <a href="moviesingle.html">
+                <a href={'/movie/' + movie.id}>
                     Read more
                     <i className=" ion-android-arrow-dropright "></i>
                 </a>
             </div>
             <div className="title-in">
                 <h6>
-                    <a href="#">{movie.title}</a>
+                    <a href={'/movie/' + movie.id}>{movie.title}</a>
                 </h6>
                 <p>
                     <i className=" ion-android-star "></i>

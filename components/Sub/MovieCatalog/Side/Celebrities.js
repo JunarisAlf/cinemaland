@@ -7,9 +7,9 @@ export default function Celebrities({datas}) {
             <h4 className="sb-title">Spotlight Celebrities</h4>
             {peoples.map((people) => (
                 <div key={people.id} className="celeb-item">
-                    <a href="#">
+                    <a href={'/people/' + people.id}>
                         <img
-                           src={
+                           src={people.profile_path == null ? '/images/uploads/ava2.jpg' :
                             'https://image.tmdb.org/t/p/original' +
                             people.profile_path
                         }
@@ -20,7 +20,7 @@ export default function Celebrities({datas}) {
                     </a>
                     <div className="celeb-author">
                         <h6>
-                            <a href="#">{people.name}</a>
+                            <a href={'/people/' + people.id}>{people.name}</a>
                         </h6>
                         <span>ACTOR</span>
                     </div>

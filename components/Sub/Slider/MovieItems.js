@@ -3,10 +3,10 @@ export default function MovieItems({ movie }) {
     return (
         <div className="movie-item">
             <div className="mv-img">
-                <a href="#">
+                <a href={'/movie/' + movie.id}>
                     <img
                         className="my-mv-image"
-                        src={
+                        src={ movie.poster_path == null ? '/images/uuploads/slider1.jpg' :
                             'https://image.tmdb.org/t/p/original' +
                             movie.poster_path
                         }
@@ -23,7 +23,7 @@ export default function MovieItems({ movie }) {
                     </span>
                 </div>
                 <h6>
-                    <a href="#">{movie.title.substring(0, 40)}</a>
+                    <a href={'/movie/' + movie.id}>{movie.title.substring(0, 40)}</a>
                 </h6>
                 <p>
                     <i className="ion-android-star"></i>
