@@ -34,11 +34,13 @@ export async function getStaticProps({ params }) {
 
     const movie = await resMovie.json();
     const credits = await resCredits.json();
+
     return {
         props: { movie, credits },
-    };
+    }
+    
 }
-export default function Movie({ movie, credits }) {
+export default function Movie({ movie, credits, err}) {
     const router = useRouter();
     if (router.isFallback) {
         return <Preload />;

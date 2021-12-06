@@ -8400,7 +8400,7 @@ footer .ft-copyright {
         padding: 15px;
         display: flex;
         flex-direction: column;
-        align-items: inherit;
+        align-items: center;
     }
 }
 footer .ft-copyright .backtotop a:hover {

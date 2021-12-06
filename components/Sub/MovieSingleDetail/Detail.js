@@ -23,11 +23,11 @@ export default function Detail({ movie, credits }) {
                     <div className="rate-star">
                         <p>Rating:</p>
                         <div className="star">
-                            {vote.map(() => (
-                                <i className="ion-ios-star"></i>
+                            {vote.map((i) => (
+                                <i key={i} className="ion-ios-star"></i>
                             ))}
-                            {downVote.map(() => (
-                                <i className="ion-ios-star-outline"></i>
+                            {downVote.map((i) => (
+                                <i key={i} className="ion-ios-star-outline"></i>
                             ))}
                         </div>
                     </div>
@@ -39,18 +39,7 @@ export default function Detail({ movie, credits }) {
                             <li className="active">
                                 <a href="#overview">Overview</a>
                             </li>
-                            <li>
-                                <a href="#reviews"> Reviews</a>
-                            </li>
-                            <li>
-                                <a href="#cast"> Cast & Crew </a>
-                            </li>
-                            <li>
-                                <a href="#media"> Media</a>
-                            </li>
-                            <li>
-                                <a href="#moviesrelated">Related Movies</a>
-                            </li>
+                            
                         </ul>
                         <TabContent data={movie} credits={credits} />
                     </div>

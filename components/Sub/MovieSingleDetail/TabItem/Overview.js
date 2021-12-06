@@ -28,7 +28,7 @@ export default function Overview({ datas }) {
                     {/* <!-- movie cast --> */}
                     <div className="mvcast-item">
                         {casts.map((cast) => (
-                            <div className="cast-it">
+                            <div key={cast.id} className="cast-it">
                                 <div className=" cast-left ">
                                     <img
                                         src={
@@ -59,7 +59,7 @@ export default function Overview({ datas }) {
                         <h6>Director:</h6>
                         <p>
                             {crewsRes.director.map((crew) => (
-                                <a href={'/people/' + crew.id}>{crew.name},</a>
+                                <a  href={'/people/' + crew.id}>{crew.name},</a>
                             ))}
                         </p>
                     </div>

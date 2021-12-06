@@ -48,7 +48,7 @@ export default function TabContent({ people, movies }) {
                                             alt=""
                                         />
                                         <div>
-                                            <a href="#">{movie.title} </a>
+                                            <a href={'/movie/' + movie.id}>{movie.title} </a>
                                             <p class="time">
                                                 {movie.character == null ? movie.job : movie.character}
                                             </p>
@@ -75,6 +75,10 @@ export default function TabContent({ people, movies }) {
                         <div class="sb-it">
                             <h6>Place of Birth: </h6>
                             <p>{people.place_of_birth}</p>
+                        </div>
+                        <div class="sb-it">
+                            <h6>Deathday: </h6>
+                            <p>{people.deathday == null ? '-' : people.deathday}</p>
                         </div>
                         <div class="sb-it">
                             <h6>Gender:</h6>

@@ -117,3 +117,14 @@
 .h4-active{
     color: #dcf836 !important;
 }
+.my-not-found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+.width-100{
+    width: 100% !important
+}
