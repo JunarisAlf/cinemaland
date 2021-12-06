@@ -105,3 +105,15 @@
         justify-content: center;
     }
 }
+
+.my-title-hd-sm{
+    justify-content: flex-start !important;
+    gap: 25px !important;
+}
+.my-title-hd-sm h4:hover{
+    color: #dcf836 !important;
+    cursor: pointer;
+}
+.h4-active{
+    color: #dcf836 !important;
+}

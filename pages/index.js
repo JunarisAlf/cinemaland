@@ -4,7 +4,7 @@ import Header from '../components/Core/Header';
 import Slider from '../components/Core/Slider';
 import MovieCatalog from '../components/Core/MovieCatalog';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const resMovies = await fetch(
         `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.api_key}`
     );

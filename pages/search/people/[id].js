@@ -10,7 +10,7 @@ export default function PeopleSearch() {
             <Head>
                 <title>Search</title>
             </Head>
-            <Preload />
+            {/* <Preload /> */}
             <Header />
             <Hero />
             <PeopleSearchResult />

@@ -4,7 +4,7 @@ export default function ImageSticky({ poster }) {
             <div className="movie-img my-single-movie-img my-image-fill">
                 <img
                     className="my-image-fill"
-                    src={'https://image.tmdb.org/t/p/original' + poster}
+                    src={poster == null ? '/images/uploads/movie-single.jpg': 'https://image.tmdb.org/t/p/original' + poster}
                     alt=""
                 />
             </div>
