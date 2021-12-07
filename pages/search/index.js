@@ -7,7 +7,7 @@ import MovieSearchResult from '../../components/Core/MovieSearchResult';
 import PeopleSearchResult from '../../components/Core/PeopleSearchResult';
 
 import { useRouter } from 'next/dist/client/router';
-import { useState } from 'react';
+
 export async function getServerSideProps(context) {
     let result = {};
     if (context.query.movie) {
@@ -17,7 +17,7 @@ export async function getServerSideProps(context) {
         result = await resSearch.json();
 
         return {
-            props: { result, keyword: context.query.movie },
+            props: { result, keyword: context.query.movie, kind: Object.keys(context.query)[0] },
         };
     } else if (context.query.people) {
         const resSearch = await fetch(
@@ -25,7 +25,7 @@ export async function getServerSideProps(context) {
         );
         result = await resSearch.json();
         return {
-            props: { result, keyword: context.query.people },
+            props: { result, keyword: context.query.people, kind: Object.keys(context.query)[0] },
         };
     }
     return {
@@ -36,7 +36,7 @@ export async function getServerSideProps(context) {
     };
 }
 
-export default function Search({ result, keyword }) {
+export default function Search({ result, keyword, kind}) {
     const route = useRouter();
     let resultUI = <MovieSearchResult result={result} />;
     if (result.results.length !== 0) {
@@ -47,16 +47,13 @@ export default function Search({ result, keyword }) {
         resultUI = <NotFound />;
     }
 
-    const [kind, setKind] = useState('movie');
-    const [keyword, setKeyword] = useState('movie');
-    console.log(kind, keyword)
     return (
         <div>
             <Head>
                 <title>Search</title>
             </Head>
             {/* <Preload /> */}
-            <Header setKind={setKind} setKeyword={setKeyword} kind={kind} keyword={keyword}/>
+            <Header  keywordURL={keyword} kindURL={kind}/>
             <Hero keyword={keyword} />
             {resultUI}
         </div>

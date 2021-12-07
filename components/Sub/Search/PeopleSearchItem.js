@@ -4,10 +4,9 @@ export default function PeopleSearchItem({ people }) {
             <div className="ceb-item-style-2">
                 <img
                     src={
-                        people.poster_path == null
-                            ? 'https://image.tmdb.org/t/p/original' +
-                              people.profile_path
-                            : '/images/uploads/ceblist1.jpg'
+                        people.profile_path == null
+                            ? '/images/uploads/ceblist1.jpg'
+                            : 'https://image.tmdb.org/t/p/original' + people.profile_path
                     }
                     height={141}
                     width={103}

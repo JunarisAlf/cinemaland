@@ -128,3 +128,31 @@
 .width-100{
     width: 100% !important
 }
+
+.my-search-icon{
+    padding: 5.5px 15px;
+    background-color: #233a50 ;
+    cursor: pointer;
+    transition: .2s;
+
+}
+.my-search-icon:hover{
+    background-color: #506a81 ;
+
+}
+.my-search-icon img {
+    width: 35px;
+    height: 35px;
+    color: white;
+}
+
+.my-logo{
+    display: inline-block;
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+}
+.navbar-header{
+    display: flex !important;
+    
+}

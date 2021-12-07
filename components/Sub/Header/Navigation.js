@@ -15,14 +15,15 @@ export default function Navigation() {
                         <span></span>
                     </div>
                 </div>
-                <a href="index.html">
-                    <img
+                <a href="/">
+                    <span className="my-logo">CINEMALAND</span>
+                    {/* <img
                         className="logo"
                         src="/images/logo1.png"
                         alt=""
                         width="119"
                         height="58"
-                    />
+                    /> */}
                 </a>
             </div>
 
@@ -32,9 +33,9 @@ export default function Navigation() {
                 id="bs-example-navbar-collapse-1"
             >
                 <ul className="nav navbar-nav flex-child-menu menu-right width-100">
-                    <li className="">
+                    {/* <li className="">
                         <a href="/search?movie=marvel">Search</a>
-                    </li>
+                    </li> */}
                     <li className="btn signupLink">
                         <a href="/">Home</a>
                     </li>
