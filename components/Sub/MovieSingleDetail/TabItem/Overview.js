@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
 export default function Overview({ datas }) {
     const { data, credits } = datas;
     const casts = credits.cast;
@@ -29,7 +32,7 @@ export default function Overview({ datas }) {
                         {casts.map((cast) => (
                             <div key={cast.id} className="cast-it">
                                 <div className=" cast-left ">
-                                    <img
+                                    <Image
                                         src={
                                             cast.profile_path == null
                                                 ? '/images/uploads/cast1.jpg'
@@ -40,7 +43,10 @@ export default function Overview({ datas }) {
                                         height={40}
                                         width={40}
                                     />
-                                    <a href={'/people/' + cast.id}>{cast.name}</a>
+                                    <Link href={'/people/' + cast.id}>
+                                        <a >{cast.name}</a>
+                                    </Link>
+                                    
                                 </div>
                                 <p>{cast.character}</p>
                             </div>
@@ -58,7 +64,9 @@ export default function Overview({ datas }) {
                         <h6>Director:</h6>
                         <p>
                             {crewsRes.director.map((crew) => (
-                                <a  key={crew.id} href={'/people/' + crew.id}>{crew.name},</a>
+                                <Link  key={crew.id} href={'/people/' + crew.id}>
+                                    <a >{crew.name},</a>
+                                </Link>
                             ))}
                         </p>
                     </div>
@@ -66,7 +74,10 @@ export default function Overview({ datas }) {
                         <h6>Producer:</h6>
                         <p>
                             {crewsRes.producer.map((crew) => (
-                                <a key={crew.id} href={'/people/' + crew.id}>{crew.name},</a>
+                                <Link  key={crew.id} href={'/people/' + crew.id}>
+                                    <a>{crew.name},</a>
+                                </Link>
+                                
                             ))}
                         </p>
                     </div>
@@ -74,7 +85,10 @@ export default function Overview({ datas }) {
                         <h6>Stars:</h6>
                         <p>
                             {casts.slice(0, 6).map((crew) => (
-                                <a  key={crew.id} href={'/people/' + crew.id}>{crew.name}, </a>
+                                <Link   key={crew.id} href={'/people/' + crew.id}>
+                                    <a>{crew.name}, </a>
+                                </Link>
+                                
                             ))}
                         </p>
                     </div>
@@ -82,7 +96,9 @@ export default function Overview({ datas }) {
                         <h6>Genres:</h6>
                         <p>
                             {data.genres.map((genre) => (
-                                <a key={genre.id} href="#">{genre.name}, </a>
+                                <Link key={genre.id} href="#">
+                                    <a >{genre.name}, </a>
+                                </Link>
                             ))}
                         </p>
                     </div>

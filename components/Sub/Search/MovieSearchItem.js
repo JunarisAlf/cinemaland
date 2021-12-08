@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link'
+
 export default function MovieSearchItem({ movie }) {
     return (
         <div className="movie-item-style-2 movie-item-style-1 my-movie-item-style-1 ">
@@ -13,14 +15,19 @@ export default function MovieSearchItem({ movie }) {
                 width={170}
             />
             <div className="hvr-inner my-hvr-inner">
-                <a href={'/movie/' + movie.id}>
-                    {' '}
-                    Read more <i className="ion-android-arrow-dropright"></i>{' '}
-                </a>
+                <Link href={'/movie/' + movie.id}>
+                    <a >
+                        {' '}
+                        Read more <i className="ion-android-arrow-dropright"></i>{' '}
+                    </a>
+                </Link>
             </div>
             <div className="mv-item-infor">
                 <h6>
-                    <a href={'/movie/' + movie.id}>{movie.title}</a>
+                    <Link href={'/movie/' + movie.id}>
+                        <a >{movie.title}</a>
+                    </Link>
+                    
                 </h6>
                 <p className="rate">
                     <i className="ion-android-star"></i>

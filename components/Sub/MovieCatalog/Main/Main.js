@@ -2,6 +2,7 @@ import React from 'react';
 import MovieItemDetail from './MovieItemDetail';
 import Tab from './Tab';
 
+
 export default function Main({ datas }) {
     const {bestByGenreDatas, topRatedDatas} = datas;
     return (

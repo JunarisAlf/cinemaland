@@ -1,3 +1,6 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
 export default function MovieItemDetail({ datas }) {
     const movies = datas.results;
     return (
@@ -7,7 +10,7 @@ export default function MovieItemDetail({ datas }) {
                     key={movie.id}
                     className="movie-item-style-2 my-movie-item-style-2"
                 >
-                    <img
+                    <Image
                         className="filter"
                         src={movie.poster_path == null ? '/images/uploads/mv.1' :
                             'https://image.tmdb.org/t/p/original' +
@@ -19,12 +22,15 @@ export default function MovieItemDetail({ datas }) {
                     />
                     <div className="mv-item-infor my-mv-item-infor">
                         <h6>
-                            <a href={'/movie/' + movie.id}>
-                                {movie.title}{' '}
-                                <span>
-                                    {movie.release_date.substring(0, 4)}
-                                </span>
-                            </a>
+                            <Link  href={'/movie/' + movie.id}>
+                                <a>
+                                    {movie.title}{' '}
+                                    <span>
+                                        {movie.release_date.substring(0, 4)}
+                                    </span>
+                                </a>
+                            </Link>
+                            
                         </h6>
                         <p className="rate">
                             <i className="ion-android-star"></i>

@@ -1,6 +1,6 @@
 import '../styles/global.css';
 import '../styles/costom.css';
-
+import Script from 'next/script'    
 import App from '../components/App';
 import Head from 'next/head';
 import Footer from '../components/Core/Footer';
@@ -19,10 +19,10 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <Component {...pageProps} />
             <Footer />
-            <script src="/js/jquery.js"></script>
-            <script src="/js/plugins.js"></script>
-            <script src="/js/plugins2.js"></script>
-            <script src="/js/custom.js"></script>
+            <Script src="/js/jquery.js"></Script>
+            <Script src="/js/plugins.js"></Script>
+            <Script src="/js/plugins2.js"></Script>
+            <Script src="/js/custom.js"></Script>
         </App>
     );
 }

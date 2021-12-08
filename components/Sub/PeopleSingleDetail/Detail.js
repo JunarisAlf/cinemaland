@@ -7,20 +7,6 @@ export default function Detail({people, movies}) {
 
                 <div className="movie-tabs">
                     <div className="tabs">
-                        {/* <ul className="tab-links tabs-mv">
-                            <li className="active">
-                                <a href="#overviewceb">Overview</a>
-                            </li>
-                            <li>
-                                <a href="#biography"> biography</a>
-                            </li>
-                            <li>
-                                <a href="#mediaceb"> Media</a>
-                            </li>
-                            <li>
-                                <a href="#filmography">filmography</a>
-                            </li>
-                        </ul> */}
                         <TabContent people={people} movies={movies}/>
                     </div>
                 </div>

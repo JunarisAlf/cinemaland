@@ -1,4 +1,6 @@
 import TabContent from './TabContent';
+import Link from 'next/link'
+
 
 export default function Detail({ movie, credits }) {
     const vote = [...Array(parseInt(movie.vote_average)).keys()];
@@ -37,7 +39,10 @@ export default function Detail({ movie, credits }) {
                     <div className="tabs">
                         <ul className="tab-links tabs-mv">
                             <li className="active">
-                                <a href="#overview">Overview</a>
+                                <Link href="#overview">
+                                    <a >Overview</a>
+                                </Link>
+                                
                             </li>
                             
                         </ul>

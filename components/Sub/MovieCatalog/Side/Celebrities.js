@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Celebrities({datas}) {
     const peoples = datas.results;
@@ -7,20 +9,25 @@ export default function Celebrities({datas}) {
             <h4 className="sb-title">Spotlight Celebrities</h4>
             {peoples.map((people) => (
                 <div key={people.id} className="celeb-item">
-                    <a href={'/people/' + people.id}>
-                        <img
-                           src={people.profile_path == null ? '/images/uploads/ava2.jpg' :
-                            'https://image.tmdb.org/t/p/original' +
-                            people.profile_path
-                        }
-                            alt=""
-                            width={70}
-                            height={70}
-                        />
-                    </a>
+                    <Link href={'/people/' + people.id}>
+                        <a >
+                            <Image
+                            src={people.profile_path == null ? '/images/uploads/ava2.jpg' :
+                                'https://image.tmdb.org/t/p/original' +
+                                people.profile_path
+                            }
+                                alt=""
+                                width={70}
+                                height={70}
+                            />
+                        </a>
+                    </Link>
+                    
                     <div className="celeb-author">
                         <h6>
-                            <a href={'/people/' + people.id}>{people.name}</a>
+                            <Link href={'/people/' + people.id}>
+                                <a>{people.name}</a>
+                            </Link>
                         </h6>
                         <span>ACTOR</span>
                     </div>

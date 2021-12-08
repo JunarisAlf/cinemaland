@@ -1,8 +1,12 @@
+import Image from 'next/image';
+import Link from 'next/link'
+
+
 export default function PeopleSearchItem({ people }) {
     return (
         <div className="col-md-6">
             <div className="ceb-item-style-2">
-                <img
+                <Image
                     src={
                         people.profile_path == null
                             ? '/images/uploads/ceblist1.jpg'
@@ -14,7 +18,10 @@ export default function PeopleSearchItem({ people }) {
                 />
                 <div className="ceb-infor">
                     <h2>
-                        <a href={"people/" + people.id}>{people.name}</a>
+                        <Link href={"people/" + people.id}>
+                            <a >{people.name}</a>
+                        </Link>
+                        
                     </h2>
                     <span>{people.known_for_department}</span>
                     <p></p>

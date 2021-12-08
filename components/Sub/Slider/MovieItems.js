@@ -1,10 +1,12 @@
-// import Image from 'next/image';
+import Image from 'next/image';
+import Link from 'next/link'
+
 export default function MovieItems({ movie }) {
     return (
         <div className="movie-item">
             <div className="mv-img">
                 <a href={'/movie/' + movie.id}>
-                    <img
+                    <Image
                         className="my-mv-image"
                         src={ movie.poster_path == null ? '/images/uuploads/slider1.jpg' :
                             'https://image.tmdb.org/t/p/original' +
@@ -19,11 +21,16 @@ export default function MovieItems({ movie }) {
             <div className="title-in">
                 <div className="cate">
                     <span className="blue">
-                        <a href="#">{movie.genre}</a>
+                        <Link href="#">
+                            <a >{movie.genre}</a>
+                        </Link>
                     </span>
                 </div>
                 <h6>
-                    <a href={'/movie/' + movie.id}>{movie.title.substring(0, 40)}</a>
+                    <Link href={'/movie/' + movie.id}>
+                        <a >{movie.title.substring(0, 40)}</a>
+                    </Link>
+                    
                 </h6>
                 <p>
                     <i className="ion-android-star"></i>

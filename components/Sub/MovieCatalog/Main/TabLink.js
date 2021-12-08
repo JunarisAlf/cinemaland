@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import Link from 'next/link'
+
+
 export default function TabLink({ setGenre }) {
     const [tabActive, setTabActive] = useState('tab1');
     return (
@@ -10,7 +13,10 @@ export default function TabLink({ setGenre }) {
                     setGenre(18);
                 }}
             >
-                <a href="#tab1">#drama</a>
+                <Link href="#tab1">
+                    <a >#drama</a>
+                </Link>
+               
             </li>
             <li
                 className={tabActive == 'tab2' ? 'active' : 'non'}
@@ -19,7 +25,9 @@ export default function TabLink({ setGenre }) {
                     setGenre(28);
                 }}
             >
-                <a href="#tab2"> #Action</a>
+                <Link href="#tab2">
+                    <a > #Action</a>
+                </Link>
             </li>
             <li
                 className={tabActive == 'tab3' ? 'active' : 'non'}
@@ -28,7 +36,9 @@ export default function TabLink({ setGenre }) {
                     setGenre(16);
                 }}
             >
-                <a href="#tab3"> #Animation </a>
+                <Link href="#tab3">
+                    <a > #Animation </a>
+                </Link>
             </li>
             <li
                 className={tabActive == 'tab4' ? 'active' : 'non'}
@@ -37,7 +47,10 @@ export default function TabLink({ setGenre }) {
                     setGenre(878);
                 }}
             >
-                <a href="#tab4"> #Science Fiction</a>
+                <Link href="#tab4">
+                    <a > #Science Fiction</a>
+                </Link>
+                
             </li>
             <li
                 className={tabActive == 'tab5' ? 'active' : 'non'}
@@ -46,7 +59,10 @@ export default function TabLink({ setGenre }) {
                     setGenre(10749);
                 }}
             >
-                <a href="#tab4"> #Romance</a>
+                <Link  href="#tab4">
+                    <a> #Romance</a>
+                </Link>
+                
             </li>
         </ul>
     );

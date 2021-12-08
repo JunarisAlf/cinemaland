@@ -2,6 +2,8 @@ import Navigation from '../Sub/Header/Navigation';
 import { useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
 
+
+import Image from 'next/image'
 export default function Header({keywordURL = '', kindURL = 'movie'}) {
     const route = useRouter()
 
@@ -29,7 +31,7 @@ export default function Header({keywordURL = '', kindURL = 'movie'}) {
                         onKeyDown={(e) => e.key === 'Enter' && handler({kind, keyword})}
                     />
                     <div className="my-search-icon" onClick={()=>handler({kind, keyword})}>
-                        <img src="/search.svg" alt="" height="30" width="30"/>
+                        <Image src="/search.svg" alt="" height={30} width={30}/>
                     </div>
                 </div>
             </div>

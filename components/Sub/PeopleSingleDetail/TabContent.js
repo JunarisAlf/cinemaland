@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function TabContent({ people, movies }) {
     // const casts = movies.cast;
@@ -36,7 +38,7 @@ export default function TabContent({ people, movies }) {
                             {mvData.map((movie) => (
                                 <div key={movie.id} className="cast-it">
                                     <div className="cast-left cebleb-film">
-                                        <img
+                                        <Image
                                             src={
                                                 movie.poster_path == null
                                                     ? '/images/uploads/film1.jpg'
@@ -48,13 +50,16 @@ export default function TabContent({ people, movies }) {
                                             alt=""
                                         />
                                         <div>
-                                            <a href={'/movie/' + movie.id}>{movie.title} </a>
+                                            <Link href={'/movie/' + movie.id}>
+                                                <a >{movie.title} </a>
+                                            </Link>
+                                           
                                             <p className="time">
                                                 {movie.character == null ? movie.job : movie.character}
                                             </p>
                                         </div>
                                     </div>
-                                    <p>{movie.release_date.substring(0, 4)}</p>
+                                    <p>{movie.release_date?.substring(0, 4) ? movie.release_date.substring(0, 4) : movie.release_date}</p>
                                 </div>
                             ))}
                         </div>
@@ -64,7 +69,10 @@ export default function TabContent({ people, movies }) {
                             <h6>Also Known As: </h6>
                             <p>
                                 {people.also_known_as.map((name) => (
-                                    <a key={name} href="#">{name + ', '}</a>
+                                    <Link key={name} href="#">
+                                        <a >{name + ', '}</a>
+                                    </Link>
+                                    
                                 ))}
                             </p>
                         </div>

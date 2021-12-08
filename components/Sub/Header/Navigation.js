@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Navigation() {
     return (
         <nav className="navbar navbar-default navbar-custom">
@@ -15,16 +17,12 @@ export default function Navigation() {
                         <span></span>
                     </div>
                 </div>
-                <a href="/">
-                    <span className="my-logo">CINEMALAND</span>
-                    {/* <img
-                        className="logo"
-                        src="/images/logo1.png"
-                        alt=""
-                        width="119"
-                        height="58"
-                    /> */}
-                </a>
+                <Link href="/">
+                    <a >
+                        <span className="my-logo">CINEMALAND</span>
+                    </a>
+                </Link>
+               
             </div>
 
             {/* Collect the nav links, forms, and other content for toggling */}
@@ -37,7 +35,9 @@ export default function Navigation() {
                         <a href="/search?movie=marvel">Search</a>
                     </li> */}
                     <li className="btn signupLink">
-                        <a href="/">Home</a>
+                        <Link href="/">
+                            <a >Home</a>
+                        </Link>
                     </li>
                 </ul>
             </div>
