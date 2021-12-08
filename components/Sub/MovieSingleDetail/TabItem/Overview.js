@@ -9,7 +9,6 @@ export default function Overview({ datas }) {
     crewsRes.producer = crews.filter((crew) => {
         return crew.job == 'Producer';
     });
-    console.log(crewsRes);
     return (
         <div id="overview" className="tab active">
             <div className="row">
@@ -59,7 +58,7 @@ export default function Overview({ datas }) {
                         <h6>Director:</h6>
                         <p>
                             {crewsRes.director.map((crew) => (
-                                <a  href={'/people/' + crew.id}>{crew.name},</a>
+                                <a  key={crew.id} href={'/people/' + crew.id}>{crew.name},</a>
                             ))}
                         </p>
                     </div>
@@ -67,7 +66,7 @@ export default function Overview({ datas }) {
                         <h6>Producer:</h6>
                         <p>
                             {crewsRes.producer.map((crew) => (
-                                <a href={'/people/' + crew.id}>{crew.name},</a>
+                                <a key={crew.id} href={'/people/' + crew.id}>{crew.name},</a>
                             ))}
                         </p>
                     </div>
@@ -75,7 +74,7 @@ export default function Overview({ datas }) {
                         <h6>Stars:</h6>
                         <p>
                             {casts.slice(0, 6).map((crew) => (
-                                <a href={'/people/' + crew.id}>{crew.name}, </a>
+                                <a  key={crew.id} href={'/people/' + crew.id}>{crew.name}, </a>
                             ))}
                         </p>
                     </div>
@@ -83,7 +82,7 @@ export default function Overview({ datas }) {
                         <h6>Genres:</h6>
                         <p>
                             {data.genres.map((genre) => (
-                                <a href="#">{genre.name}, </a>
+                                <a key={genre.id} href="#">{genre.name}, </a>
                             ))}
                         </p>
                     </div>

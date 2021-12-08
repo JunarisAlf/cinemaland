@@ -14,7 +14,7 @@ export default function PeopleSearchItem({ people }) {
                 />
                 <div className="ceb-infor">
                     <h2>
-                        <a href="celebritysingle.html">{people.name}</a>
+                        <a href={"people/" + people.id}>{people.name}</a>
                     </h2>
                     <span>{people.known_for_department}</span>
                     <p></p>

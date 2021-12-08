@@ -12,8 +12,6 @@ export default function Header({keywordURL = '', kindURL = 'movie'}) {
         route.push('/search?'+kind+'=' + keyword)
     }
 
-    console.log(keyword, kind)
-
     return (
         <header className="ht-header">
             <div className="container">

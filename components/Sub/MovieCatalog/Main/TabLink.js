@@ -2,7 +2,7 @@ import { useState } from 'react';
 export default function TabLink({ setGenre }) {
     const [tabActive, setTabActive] = useState('tab1');
     return (
-        <ul class="tab-links">
+        <ul className="tab-links">
             <li
                 className={tabActive == 'tab1' ? 'active' : 'non'}
                 onClick={() => {

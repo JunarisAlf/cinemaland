@@ -7,13 +7,13 @@ export default function TabContent({ people, movies }) {
     const mvData = active == 'cast' ? movies.cast : movies.crew;
 
     return (
-        <div class="tab-content">
-            <div id="overviewceb" class="tab active">
-                <div class="row">
-                    <div class="col-md-8 col-sm-12 col-xs-12">
+        <div className="tab-content">
+            <div id="overviewceb" className="tab active">
+                <div className="row">
+                    <div className="col-md-8 col-sm-12 col-xs-12">
                         <p>{people.biography}</p>
 
-                        <div class="title-hd-sm my-title-hd-sm">
+                        <div className="title-hd-sm my-title-hd-sm">
                             <h4
                                 className={active == 'cast' ? 'h4-active' : ''}
                                 onClick={() => {
@@ -32,10 +32,10 @@ export default function TabContent({ people, movies }) {
                                 CREW
                             </h4>
                         </div>
-                        <div class="mvcast-item">
+                        <div className="mvcast-item">
                             {mvData.map((movie) => (
-                                <div class="cast-it">
-                                    <div class="cast-left cebleb-film">
+                                <div key={movie.id} className="cast-it">
+                                    <div className="cast-left cebleb-film">
                                         <img
                                             src={
                                                 movie.poster_path == null
@@ -49,7 +49,7 @@ export default function TabContent({ people, movies }) {
                                         />
                                         <div>
                                             <a href={'/movie/' + movie.id}>{movie.title} </a>
-                                            <p class="time">
+                                            <p className="time">
                                                 {movie.character == null ? movie.job : movie.character}
                                             </p>
                                         </div>
@@ -59,28 +59,28 @@ export default function TabContent({ people, movies }) {
                             ))}
                         </div>
                     </div>
-                    <div class="col-md-4 col-xs-12 col-sm-12">
-                        <div class="sb-it">
+                    <div className="col-md-4 col-xs-12 col-sm-12">
+                        <div className="sb-it">
                             <h6>Also Known As: </h6>
                             <p>
                                 {people.also_known_as.map((name) => (
-                                    <a href="#">{name + ', '}</a>
+                                    <a key={name} href="#">{name + ', '}</a>
                                 ))}
                             </p>
                         </div>
-                        <div class="sb-it">
+                        <div className="sb-it">
                             <h6>Date of Birth: </h6>
                             <p>{people.birthday}</p>
                         </div>
-                        <div class="sb-it">
+                        <div className="sb-it">
                             <h6>Place of Birth: </h6>
                             <p>{people.place_of_birth}</p>
                         </div>
-                        <div class="sb-it">
+                        <div className="sb-it">
                             <h6>Deathday: </h6>
                             <p>{people.deathday == null ? '-' : people.deathday}</p>
                         </div>
-                        <div class="sb-it">
+                        <div className="sb-it">
                             <h6>Gender:</h6>
                             <p>{people.gender == 2 ? 'Male' : 'Female'}</p>
                         </div>
