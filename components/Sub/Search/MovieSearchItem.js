@@ -15,7 +15,7 @@ export default function MovieSearchItem({ movie }) {
                 width={170}
             />
             <div className="hvr-inner my-hvr-inner">
-                <Link href={'/movie/' + movie.id}>
+                <Link href={'/movie/' + movie.id} style={{ textDecoration: 'none' }}>
                     <a >
                         {' '}
                         Read more <i className="ion-android-arrow-dropright"></i>{' '}
@@ -24,7 +24,7 @@ export default function MovieSearchItem({ movie }) {
             </div>
             <div className="mv-item-infor">
                 <h6>
-                    <Link href={'/movie/' + movie.id}>
+                    <Link href={'/movie/' + movie.id} style={{ textDecoration: 'none' }}>
                         <a >{movie.title}</a>
                     </Link>
                     

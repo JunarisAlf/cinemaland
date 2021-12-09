@@ -50,7 +50,7 @@ export default function TabContent({ people, movies }) {
                                             alt=""
                                         />
                                         <div>
-                                            <Link href={'/movie/' + movie.id}>
+                                            <Link href={'/movie/' + movie.id} style={{ textDecoration: 'none' }}>
                                                 <a >{movie.title} </a>
                                             </Link>
                                            
@@ -69,7 +69,7 @@ export default function TabContent({ people, movies }) {
                             <h6>Also Known As: </h6>
                             <p>
                                 {people.also_known_as.map((name) => (
-                                    <Link key={name} href="#">
+                                    <Link key={name} href="#" style={{ textDecoration: 'none' }}>
                                         <a >{name + ', '}</a>
                                     </Link>
                                     

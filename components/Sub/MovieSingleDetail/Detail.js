@@ -39,7 +39,7 @@ export default function Detail({ movie, credits }) {
                     <div className="tabs">
                         <ul className="tab-links tabs-mv">
                             <li className="active">
-                                <Link href="#overview">
+                                <Link href="#overview" style={{ textDecoration: 'none' }}>
                                     <a >Overview</a>
                                 </Link>
                                 

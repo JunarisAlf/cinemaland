@@ -18,7 +18,7 @@ export default function PeopleSearchItem({ people }) {
                 />
                 <div className="ceb-infor">
                     <h2>
-                        <Link href={"people/" + people.id}>
+                        <Link href={"people/" + people.id} style={{ textDecoration: 'none' }}>
                             <a >{people.name}</a>
                         </Link>
                         

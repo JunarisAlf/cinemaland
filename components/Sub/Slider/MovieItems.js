@@ -21,13 +21,13 @@ export default function MovieItems({ movie }) {
             <div className="title-in">
                 <div className="cate">
                     <span className="blue">
-                        <Link href="#">
+                        <Link href="#" style={{ textDecoration: 'none' }}>
                             <a >{movie.genre}</a>
                         </Link>
                     </span>
                 </div>
                 <h6>
-                    <Link href={'/movie/' + movie.id}>
+                    <Link href={'/movie/' + movie.id} style={{ textDecoration: 'none' }}>
                         <a >{movie.title.substring(0, 40)}</a>
                     </Link>
                     

@@ -9,7 +9,7 @@ export default function ImageSticky() {
                 <div className="movie-btn">
                     <div className="btn-transform transform-vertical red">
                         <div>
-                            <Link href="#">
+                            <Link href="#" style={{ textDecoration: 'none' }}>
                                 <a  className="item item-1 redbtn">
                                     <i className="ion-play"></i> Watch Trailer
                                 </a>
@@ -17,7 +17,7 @@ export default function ImageSticky() {
                             
                         </div>
                         <div>
-                            <Link href="https://www.youtube.com/embed/o-0hcF97wy0">
+                            <Link href="https://www.youtube.com/embed/o-0hcF97wy0" style={{ textDecoration: 'none' }}>
                                 <a className=" item item-2 redbtn fancybox-media hvr-grow"  >
                                     <i className="ion-play"></i>
                                 </a>
@@ -26,7 +26,7 @@ export default function ImageSticky() {
                     </div>
                     <div className="btn-transform transform-vertical">
                         <div>
-                            <Link href="#" >
+                            <Link href="#"style={{ textDecoration: 'none' }} >
                                 <a className="item item-1 yellowbtn">
                                     <i className="ion-card"></i> Buy ticket
                                 </a>
@@ -34,7 +34,7 @@ export default function ImageSticky() {
                             
                         </div>
                         <div>
-                            <Link href="#">
+                            <Link href="#" style={{ textDecoration: 'none' }}>
                                 <a  className="item item-2 yellowbtn">
                                     <i className="ion-card"></i>
                                 </a>

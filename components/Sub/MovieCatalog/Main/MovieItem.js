@@ -18,7 +18,7 @@ export default function MovieItem({ movie }) {
                 />
             </div>
             <div className="hvr-inner">
-                <Link  href={'/movie/' + movie.id}>
+                <Link  href={'/movie/' + movie.id} style={{ textDecoration: 'none' }}>
                     <a>
                         Read more
                         <i className=" ion-android-arrow-dropright "></i>
@@ -28,7 +28,7 @@ export default function MovieItem({ movie }) {
             </div>
             <div className="title-in">
                 <h6>
-                    <Link href={'/movie/' + movie.id}>
+                    <Link href={'/movie/' + movie.id} style={{ textDecoration: 'none' }}>
                         <a>{movie.title}</a>
                     </Link>
                 </h6>

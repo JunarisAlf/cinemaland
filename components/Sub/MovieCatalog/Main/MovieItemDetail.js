@@ -22,7 +22,7 @@ export default function MovieItemDetail({ datas }) {
                     />
                     <div className="mv-item-infor my-mv-item-infor">
                         <h6>
-                            <Link  href={'/movie/' + movie.id}>
+                            <Link  href={'/movie/' + movie.id} style={{ textDecoration: 'none' }}>
                                 <a>
                                     {movie.title}{' '}
                                     <span>

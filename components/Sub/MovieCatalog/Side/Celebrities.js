@@ -9,7 +9,7 @@ export default function Celebrities({datas}) {
             <h4 className="sb-title">Spotlight Celebrities</h4>
             {peoples.map((people) => (
                 <div key={people.id} className="celeb-item">
-                    <Link href={'/people/' + people.id}>
+                    <Link href={'/people/' + people.id} style={{ textDecoration: 'none' }}>
                         <a >
                             <Image
                             src={people.profile_path == null ? '/images/uploads/ava2.jpg' :
@@ -25,7 +25,7 @@ export default function Celebrities({datas}) {
                     
                     <div className="celeb-author">
                         <h6>
-                            <Link href={'/people/' + people.id}>
+                            <Link href={'/people/' + people.id} style={{ textDecoration: 'none' }}>
                                 <a>{people.name}</a>
                             </Link>
                         </h6>

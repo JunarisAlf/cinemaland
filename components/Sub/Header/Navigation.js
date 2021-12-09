@@ -17,7 +17,7 @@ export default function Navigation() {
                         <span></span>
                     </div>
                 </div>
-                <Link href="/">
+                <Link href="/" style={{ textDecoration: 'none' }}>
                     <a >
                         <span className="my-logo">CINEMALAND</span>
                     </a>
@@ -35,7 +35,7 @@ export default function Navigation() {
                         <a href="/search?movie=marvel">Search</a>
                     </li> */}
                     <li className="btn signupLink">
-                        <Link href="/">
+                        <Link href="/" style={{ textDecoration: 'none' }}>
                             <a >Home</a>
                         </Link>
                     </li>

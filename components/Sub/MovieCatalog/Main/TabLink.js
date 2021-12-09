@@ -13,7 +13,7 @@ export default function TabLink({ setGenre }) {
                     setGenre(18);
                 }}
             >
-                <Link href="#tab1">
+                <Link href="#tab1" style={{ textDecoration: 'none' }}>
                     <a >#drama</a>
                 </Link>
                
@@ -25,7 +25,7 @@ export default function TabLink({ setGenre }) {
                     setGenre(28);
                 }}
             >
-                <Link href="#tab2">
+                <Link href="#tab2" style={{ textDecoration: 'none' }}>
                     <a > #Action</a>
                 </Link>
             </li>
@@ -36,7 +36,7 @@ export default function TabLink({ setGenre }) {
                     setGenre(16);
                 }}
             >
-                <Link href="#tab3">
+                <Link href="#tab3" style={{ textDecoration: 'none' }}>
                     <a > #Animation </a>
                 </Link>
             </li>
@@ -47,7 +47,7 @@ export default function TabLink({ setGenre }) {
                     setGenre(878);
                 }}
             >
-                <Link href="#tab4">
+                <Link href="#tab4" style={{ textDecoration: 'none' }}>
                     <a > #Science Fiction</a>
                 </Link>
                 
@@ -59,7 +59,7 @@ export default function TabLink({ setGenre }) {
                     setGenre(10749);
                 }}
             >
-                <Link  href="#tab4">
+                <Link  href="#tab4" style={{ textDecoration: 'none' }}>
                     <a> #Romance</a>
                 </Link>
                 
