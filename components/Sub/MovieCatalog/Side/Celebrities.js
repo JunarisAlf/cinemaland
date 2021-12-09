@@ -18,7 +18,7 @@ export default function Celebrities({datas}) {
                             }
                                 alt=""
                                 width={70}
-                                height={70}
+                                height={100}
                             />
                         </a>
                     </Link>

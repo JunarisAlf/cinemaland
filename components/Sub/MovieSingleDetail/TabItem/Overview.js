@@ -40,8 +40,8 @@ export default function Overview({ datas }) {
                                                   cast.profile_path
                                         }
                                         alt=""
-                                        height={40}
-                                        width={40}
+                                        height={100}
+                                        width={70}
                                     />
                                     <Link href={'/people/' + cast.id}>
                                         <a >{cast.name}</a>

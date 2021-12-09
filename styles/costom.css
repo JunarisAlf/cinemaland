@@ -1,3 +1,7 @@
+
+a{
+    text-decoration: none !important;
+}
 .my-container {
     display: flex;
     flex-direction: row;
@@ -111,8 +115,15 @@
     gap: 25px !important;
 }
 .my-title-hd-sm h4:hover{
+    display: flex;
+    flex-direction: row;
     color: #dcf836 !important;
     cursor: pointer;
+    align-items: center;
+    
+}
+.my-title-hd-sm h4{
+    margin: 0 !important;
 }
 .h4-active{
     color: #dcf836 !important;
@@ -130,7 +141,7 @@
 }
 
 .my-search-icon{
-    padding: 5.5px 15px;
+    padding: 8.5px 15px;
     background-color: #233a50 ;
     cursor: pointer;
     transition: .2s;
@@ -155,4 +166,7 @@
 .navbar-header{
     display: flex !important;
     
+}
+.cast-left span{
+    margin-right: 20px !important;
 }

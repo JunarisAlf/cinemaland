@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Header from '../components/Core/Header';
 import Slider from '../components/Core/Slider';
 import MovieCatalog from '../components/Core/MovieCatalog';
+import { useState } from 'react';
 
 export async function getServerSideProps() {
     const resMovies = await fetch(
@@ -30,6 +31,7 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ movieDatas, genreDatas, bestByGenreDatas, topRatedDatas,popularPeople }) {
+
     return (
         <div>
             <Head>

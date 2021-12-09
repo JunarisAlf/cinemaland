@@ -46,7 +46,7 @@ export default function TabContent({ people, movies }) {
                                                       movie.poster_path
                                             }
                                             width={55}
-                                            height={77}
+                                            height={100}
                                             alt=""
                                         />
                                         <div>
