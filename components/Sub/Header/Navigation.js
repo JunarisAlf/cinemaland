@@ -35,8 +35,8 @@ export default function Navigation() {
                         <a href="/search?movie=marvel">Search</a>
                     </li> */}
                     <li className="btn signupLink">
-                        <Link href="/" style={{ textDecoration: 'none' }}>
-                            <a >Home</a>
+                        <Link href="/" >
+                            <a style={{ textDecoration: 'none' }}>Home</a>
                         </Link>
                     </li>
                 </ul>

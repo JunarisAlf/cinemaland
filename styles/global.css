@@ -46,16 +46,16 @@
     a:visited {
         text-decoration: none;
     }
-    a[href]:after {
+    /* a[href]:after {
         content: ' (' attr(href) ')';
-    }
+    } */
     abbr[title]:after {
         content: ' (' attr(title) ')';
     }
-    a[href^='#']:after,
+    /* a[href^='#']:after,
     a[href^='javascript:']:after {
         content: '';
-    }
+    } */
     pre,
     blockquote {
         border: 1px solid #999;

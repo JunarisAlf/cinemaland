@@ -9,8 +9,8 @@ export default function Celebrities({datas}) {
             <h4 className="sb-title">Spotlight Celebrities</h4>
             {peoples.map((people) => (
                 <div key={people.id} className="celeb-item">
-                    <Link href={'/people/' + people.id} style={{ textDecoration: 'none' }}>
-                        <a >
+                    <Link href={'/people/' + people.id} >
+                        <a style={{ textDecoration: 'none', paddingRight: '20px' }}>
                             <Image
                             src={people.profile_path == null ? '/images/uploads/ava2.jpg' :
                                 'https://image.tmdb.org/t/p/original' +
