@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function TabContent({ people, movies }) {
     // const casts = movies.cast;
@@ -45,21 +45,34 @@ export default function TabContent({ people, movies }) {
                                                     : 'https://image.tmdb.org/t/p/original' +
                                                       movie.poster_path
                                             }
-                                            width={55}
                                             height={100}
+                                            width={75}
+                                            layout="fixed"
                                             alt=""
                                         />
+
                                         <div>
-                                            <Link href={'/movie/' + movie.id} style={{ textDecoration: 'none' }}>
-                                                <a >{movie.title} </a>
+                                            <Link
+                                                href={'/movie/' + movie.id}
+                                                style={{
+                                                    textDecoration: 'none',
+                                                }}
+                                            >
+                                                <a>{movie.title} </a>
                                             </Link>
-                                           
+
                                             <p className="time">
-                                                {movie.character == null ? movie.job : movie.character}
+                                                {movie.character == null
+                                                    ? movie.job
+                                                    : movie.character}
                                             </p>
                                         </div>
                                     </div>
-                                    <p>{movie.release_date?.substring(0, 4) ? movie.release_date.substring(0, 4) : movie.release_date}</p>
+                                    <p>
+                                        {movie.release_date?.substring(0, 4)
+                                            ? movie.release_date.substring(0, 4)
+                                            : movie.release_date}
+                                    </p>
                                 </div>
                             ))}
                         </div>
@@ -69,10 +82,13 @@ export default function TabContent({ people, movies }) {
                             <h6>Also Known As: </h6>
                             <p>
                                 {people.also_known_as.map((name) => (
-                                    <Link key={name} href="#" style={{ textDecoration: 'none' }}>
-                                        <a >{name + ', '}</a>
+                                    <Link
+                                        key={name}
+                                        href="#"
+                                        style={{ textDecoration: 'none' }}
+                                    >
+                                        <a>{name + ', '}</a>
                                     </Link>
-                                    
                                 ))}
                             </p>
                         </div>
@@ -86,7 +102,11 @@ export default function TabContent({ people, movies }) {
                         </div>
                         <div className="sb-it">
                             <h6>Deathday: </h6>
-                            <p>{people.deathday == null ? '-' : people.deathday}</p>
+                            <p>
+                                {people.deathday == null
+                                    ? '-'
+                                    : people.deathday}
+                            </p>
                         </div>
                         <div className="sb-it">
                             <h6>Gender:</h6>

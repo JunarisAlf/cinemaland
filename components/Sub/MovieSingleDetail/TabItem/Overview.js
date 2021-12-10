@@ -31,8 +31,9 @@ export default function Overview({ datas }) {
                     <div className="mvcast-item">
                         {casts.map((cast) => (
                             <div key={cast.id} className="cast-it">
-                                <div className=" cast-left ">
+                                <div className=" cast-left" >
                                     <Image
+                                    
                                         src={
                                             cast.profile_path == null
                                                 ? '/images/uploads/cast1.jpg'
@@ -40,8 +41,9 @@ export default function Overview({ datas }) {
                                                   cast.profile_path
                                         }
                                         alt=""
-                                        height={100}
+                                        height={95}
                                         width={70}
+                                        layout='fixed'
                                     />
                                     <Link href={'/people/' + cast.id}>
                                         <a >{cast.name}</a>

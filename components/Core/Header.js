@@ -31,7 +31,7 @@ export default function Header({keywordURL = '', kindURL = 'movie'}) {
                         onKeyDown={(e) => e.key === 'Enter' && handler({kind, keyword})}
                     />
                     <div className="my-search-icon" onClick={()=>handler({kind, keyword})}>
-                        <Image src="/search.svg" alt="" height={30} width={30}/>
+                        <Image src="/search.svg" alt="" height={35} width={35}/>
                     </div>
                 </div>
             </div>

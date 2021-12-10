@@ -141,7 +141,9 @@ a{
 }
 
 .my-search-icon{
-    padding: 8.5px 15px;
+    box-sizing: border-box;
+    padding: 10px 7px;
+    height: 46px;
     background-color: #233a50 ;
     cursor: pointer;
     transition: .2s;
@@ -151,11 +153,7 @@ a{
     background-color: #506a81 ;
 
 }
-.my-search-icon img {
-    width: 35px;
-    height: 35px;
-    color: white;
-}
+
 
 .my-logo{
     display: inline-block;
@@ -165,8 +163,13 @@ a{
 }
 .navbar-header{
     display: flex !important;
+    align-items: center !important;
     
 }
+/* .cast */
 .cast-left span{
     margin-right: 20px !important;
+}
+.cast-left a{
+    text-align: right;
 }

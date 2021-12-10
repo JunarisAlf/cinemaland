@@ -44,7 +44,7 @@
     }
     a,
     a:visited {
-        text-decoration: underline;
+        text-decoration: none;
     }
     a[href]:after {
         content: ' (' attr(href) ')';
@@ -4218,8 +4218,13 @@ ul {
     position: absolute;
 }
 @media (max-width: 767px) {
-    .movie-items .movie-item .title-in {
+    .movie-items .movie-item  {
         margin-left: 60px;
+    }
+    .title-in{
+        width: 100% !important;
+        margin-left: 0 !important;
+        align-items: center !important;
     }
 }
 .movie-items .movie-item .title-in h6 a {
@@ -4666,6 +4671,8 @@ ul {
     color: #ffffff;
     font-weight: 400;
 }
+
+
 @media (max-width: 767px) {
     .topbar-filter select {
         border: 1px solid #405266;
@@ -8074,6 +8081,7 @@ header .top-search select {
     /* Firefox */
     background: url('../public/images/uploads/drop-icon.png') no-repeat right
         20px center;
+    background-origin: padding-box;
     text-transform: uppercase;
     color: #ffffff;
 }
@@ -8187,9 +8195,11 @@ header#headerv3-light {
 .sticky .top-search {
     display: none;
 }
+
+
 @media (max-width: 991px) {
     .top-search select {
-        width: 40% !important;
+        width: 35% !important;
     }
     header .navbar-collapse.collapse {
         display: none;
