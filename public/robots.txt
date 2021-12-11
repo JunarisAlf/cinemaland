@@ -1,3 +1,4 @@
 # Allow all user agents.
 User-agent: *
 Allow: /
+Sitemap: htpps://www.hallocinema.com/sitemap.txt

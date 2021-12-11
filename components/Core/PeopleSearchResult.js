@@ -7,7 +7,7 @@ export default function PeopleSearchResult({result}) {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12 col-sm-12 col-xs-12">
-                        <div className="flex-wrap-movielist mv-grid-fw my-flex-start">
+                        <div className="flex-wrap-movielist mv-grid-fw my-flex-start" style={{justifyContent: 'center !important'}}>
                             {data.map((people) => (
                                 <PeoleSearchItem key={people.id} people={people}/>
                             ))}
