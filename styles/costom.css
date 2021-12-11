@@ -76,9 +76,16 @@ a{
         font-size: 10px !important;
     }
 }
+.hvr-item{
+    width: 90% !important
+}
 .hvr-inner a{
+    font-size: 10px !important;
     padding: 5px 10px !important;
     margin-top: 90px !important;
+}
+.hvr-inner a i{
+    padding: 0 5px !important   ;
 }
 .my-flex-start {
     justify-content: flex-start !important;
