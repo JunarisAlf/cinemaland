@@ -1,6 +1,6 @@
 
 a{
-    text-decoration: none !important;
+    border-bottom: none !important;
 }
 .my-container {
     display: flex;
@@ -76,7 +76,10 @@ a{
         font-size: 10px !important;
     }
 }
-
+.hvr-inner a{
+    padding: 5px 10px !important;
+    margin-top: 90px !important;
+}
 .my-flex-start {
     justify-content: flex-start !important;
 }
@@ -172,4 +175,17 @@ a{
 }
 .cast-left a{
     text-align: right;
+}
+
+.my-pagination{
+    background-color: #020d18;
+    padding: 0 30px 50px 30px;
+    margin-top: -40px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
 }

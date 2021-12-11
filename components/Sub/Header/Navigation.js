@@ -19,7 +19,7 @@ export default function Navigation() {
                 </div>
                 <Link href="/" style={{ textDecoration: 'none' }}>
                     <a >
-                        <span className="my-logo">CINEMALAND</span>
+                        <span className="my-logo">HALLOCINEMA</span>
                     </a>
                 </Link>
                
@@ -31,9 +31,18 @@ export default function Navigation() {
                 id="bs-example-navbar-collapse-1"
             >
                 <ul className="nav navbar-nav flex-child-menu menu-right width-100">
-                    {/* <li className="">
-                        <a href="/search?movie=marvel">Search</a>
-                    </li> */}
+                    <li>
+                        <Link href="/all-movie">
+                            <a >Movie</a>
+                        </Link>
+                        
+                    </li>
+                    <li>
+                        <Link href="/all-person">
+                            <a >Person</a>
+                        </Link>
+                        
+                    </li>
                     <li className="btn signupLink">
                         <Link href="/" >
                             <a style={{ textDecoration: 'none' }}>Home</a>

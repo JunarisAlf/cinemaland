@@ -21,10 +21,10 @@ function MyApp({ Component, pageProps }) {
             </Head>
             <Component {...pageProps} />
             <Footer />
-            <Script src="/js/jquery.js" />
-            <Script src="/js/plugins.js" />
-            <Script src="/js/plugins2.js" />
-            <Script src="/js/custom.js" />
+            <Script strategy='lazyOnload' src="/js/jquery.js" />
+            <Script strategy='lazyOnload' src="/js/plugins.js" />
+            <Script strategy='lazyOnload' src="/js/plugins2.js" />
+            <Script strategy='lazyOnload' src="/js/custom.js" />
         </App>
     );
 }
