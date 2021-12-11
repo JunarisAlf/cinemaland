@@ -5,16 +5,36 @@ import PeopleSingleDetail from '../../components/Core/PeopleSingleDetail';
 import { useRouter } from 'next/router';
 
 export async function getStaticPaths() {
-    const resPeoples1 = await fetch(
-        `https://api.themoviedb.org/3/person/popular?api_key=${process.env.api_key}`
+    const resPerson1 = await fetch(
+        `https://api.themoviedb.org/3/person/popular?api_key=${process.env.api_key}&page=1`
     );
-    const resPeoples2 = await fetch(
-        `https://api.themoviedb.org/3/person/popular?page=2&api_key=${process.env.api_key}`
+    const resPerson2 = await fetch(
+        `https://api.themoviedb.org/3/person/popular?api_key=${process.env.api_key}&page=2`
     );
-    const peoples1 = await resPeoples1.json();
-    const peoples2 = await resPeoples2.json();
-    const peoples = [...peoples1.results, ...peoples2.results];
-    const paths = peoples.map((people) => ({
+    const resPerson3 = await fetch(
+        `https://api.themoviedb.org/3/person/popular?api_key=${process.env.api_key}&page=3`
+    );
+    const resPerson4 = await fetch(
+        `https://api.themoviedb.org/3/person/popular?api_key=${process.env.api_key}&page=4`
+    );
+    const resPerson5 = await fetch(
+        `https://api.themoviedb.org/3/person/popular?api_key=${process.env.api_key}&page=5`
+    );
+    const result1 = await resPerson1.json();
+    const result2 = await resPerson2.json();
+    const result3 = await resPerson3.json();
+    const result4 = await resPerson4.json();
+    const result5 = await resPerson5.json();
+
+    const results = [
+        ...result1.results,
+        ...result2.results,
+        ...result3.results,
+        ...result4.results,
+        ...result5.results
+    ];
+
+    const paths = results.map((people) => ({
         params: { id: people.id.toString() },
     }));
     return {
@@ -30,7 +50,7 @@ export async function getStaticProps({ params }) {
         `https://api.themoviedb.org/3/person/${params.id}/movie_credits?api_key=${process.env.api_key}`
     );
     const people = await resPeople.json();
-    const movies = await resMovies.json()
+    const movies = await resMovies.json();
     return {
         props: { people, movies },
     };
@@ -47,7 +67,7 @@ export default function People({ people, movies }) {
                 <title>{people.name}</title>
             </Head>
             <Header />
-            <PeopleSingleDetail people={people} movies={movies}/>
+            <PeopleSingleDetail people={people} movies={movies} />
         </div>
     );
 }

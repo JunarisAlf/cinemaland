@@ -5,17 +5,48 @@ import MovieSingleDetail from '../../components/Core/MovieSingleDetail';
 import { useRouter } from 'next/router';
 
 export async function getStaticPaths() {
-    const resMovies = await fetch(
-        `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.api_key}`
+    const resMovies1 = await fetch(
+        `https://api.themoviedb.org/3/trending/movie/week?api_key=${
+            process.env.api_key
+        }&page=1`
+    );
+    const resMovies2 = await fetch(
+        `https://api.themoviedb.org/3/trending/movie/week?api_key=${
+            process.env.api_key
+        }&page=2`
+    );
+    const resMovies3 = await fetch(
+        `https://api.themoviedb.org/3/trending/movie/week?api_key=${
+            process.env.api_key
+        }&page=3`
+    );
+    const resMovies4 = await fetch(
+        `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.api_key}&page=4`
+    );
+    const resMovies5 = await fetch(
+        `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.api_key}&page=5`
     );
     const resTopRated = await fetch(
         `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.api_key}&language=en-US`
     );
 
-    const movieDatas = await resMovies.json();
+    const result1 = await resMovies1.json();
+    const result2 = await resMovies2.json();
+    const result3 = await resMovies3.json();
+    const result4 = await resMovies4.json();
+    const result5 = await resMovies5.json();
     const topRatedDatas = await resTopRated.json();
-    const movies = [...movieDatas.results, ...topRatedDatas.results];
-    const paths = movies.map((movie) => ({
+
+    const results = [
+        ...result1.results,
+        ...result2.results,
+        ...result3.results,
+        ...result4.results,
+        ...result5.results,
+        ...topRatedDatas.results,
+    ];
+
+    const paths = results.map((movie) => ({
         params: { id: movie.id.toString() },
     }));
     return {
@@ -37,10 +68,9 @@ export async function getStaticProps({ params }) {
 
     return {
         props: { movie, credits },
-    }
-    
+    };
 }
-export default function Movie({ movie, credits, err}) {
+export default function Movie({ movie, credits, err }) {
     const router = useRouter();
     if (router.isFallback) {
         return <Preload />;
