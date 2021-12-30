@@ -43,6 +43,18 @@ export default function Navigation() {
                         </Link>
                         
                     </li>
+                    <li>
+                        <Link href="/blogs">
+                            <a >Blog</a>
+                        </Link>
+                        
+                    </li>
+                    <li>
+                        <Link href="/profile">
+                            <a >Profile</a>
+                        </Link>
+                        
+                    </li>
                     <li className="btn signupLink">
                         <Link href="/" >
                             <a style={{ textDecoration: 'none' }}>Home</a>

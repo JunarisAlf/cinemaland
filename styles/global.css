@@ -4662,8 +4662,7 @@ ul {
     -webkit-appearance: none;
     -moz-appearance: none;
     /* Firefox */
-    background: url('../public/images/uploads/drop-icon.png') no-repeat right
-        20px center;
+    
     border-left: 1px solid #405266;
     border-right: 1px solid #405266;
     border-top: none;

@@ -71,17 +71,20 @@ a{
     .my-hvr-inner {
         padding: 5px 10px !important;
         margin-top: 90px !important;
+       
     }
     .my-hvr-inner > a {
         font-size: 10px !important;
     }
 }
 .hvr-inner{
-    width: 90% !important
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
 }
 .hvr-inner a{
     font-size: 10px !important;
-    padding: 5px 10px !important;
+    padding: 5px 5px !important;
     margin-top: 90px !important;
 }
 .hvr-inner a i{
@@ -195,4 +198,8 @@ a{
     justify-content: space-between;
     flex-wrap: nowrap;
 
+}
+
+.my-post{
+    padding-left: 20px !important;
 }

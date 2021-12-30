@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function PeopleSearchItem({ people }) {
     return (
-        <div className="col-xs-5 col-sm-6 col-md-6">
+        <div className="col-xs-6 col-sm-6 col-md-6">
             <div className="ceb-item-style-2">
                 <Image
                     src={
