@@ -203,3 +203,8 @@ a{
 .my-post{
     padding-left: 20px !important;
 }
+
+.my-post-detail{
+    display: flex;
+    flex-direction: column;
+}

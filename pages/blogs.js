@@ -26,7 +26,7 @@ export async function getStaticProps() {
     };
 }
 
-export default function AllMovie(posts) {
+export default function Blogs({posts}) {
     return (
         <div>
             <Head>
@@ -37,7 +37,7 @@ export default function AllMovie(posts) {
             <div className="page-single">
                 <div className="container">
                     <div className="row">
-                        {posts.posts.map(data => (
+                        {posts.map(data => (
                             <PostList data={data}/>
                         ))}
                         
