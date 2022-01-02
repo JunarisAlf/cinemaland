@@ -11,7 +11,7 @@ export async function getStaticProps() {
         birth: '07 June 2001',
         placeOfBirth: 'Kuantan Singingi, Riau',
         study: 'Universitas Muhammadiyah Riau',
-        description: '-',
+        description: 'Hanya seorang mahasiswa biasa.',
     };
     return {
         props: { profile },
