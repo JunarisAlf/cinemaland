@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 export default function PostList({data}) {
     return (
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="blog-item-style-1 blog-item-style-3">
+        <div className="col-md-12 col-sm-12 col-xs-12">
+            <div className="blog-item-style-1 blog-item-style-3">
                 
-                <div class="blog-it-infor  my-post">
+                <div className="blog-it-infor  my-post">
                     <h3>
                         <Link href="blogdetail.html">
                             <a >
@@ -14,7 +14,7 @@ export default function PostList({data}) {
                         </Link>
                         
                     </h3>
-                    <span class="time">{data.date}</span>
+                    <span className="time">{data.date}</span>
                     <p>
                         {data.preview}
                     </p>

@@ -9,12 +9,14 @@ import PostList from '../components/Core/PostList';
 export async function getStaticProps() {
     const posts = [
         {
+            key:'1',
             title: 'title',
             image: '/public/images/post1.jpg',
             date: '30 December 2021',
             preview: 'lorem ipsum dolor sit emet lorem ipsum dolor sit emet lorem ipsum dolor sit emet lorem ipsum dolor sit emet lorem ipsum dolor sit emet lorem ipsum dolor sit emet lorem ipsum dolor sit emet'
         },
         {
+            key:'2',
             title: 'lorem ipsum dolor sit emet lorem',
             image: '/public/images/post2.jpg',
             date: '30 December 2021',
@@ -38,7 +40,7 @@ export default function Blogs({posts}) {
                 <div className="container">
                     <div className="row">
                         {posts.map(data => (
-                            <PostList data={data}/>
+                            <PostList key={data.key} data={data}/>
                         ))}
                         
                     </div>

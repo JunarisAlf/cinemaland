@@ -15,10 +15,10 @@ export default function Blog() {
             <div className="page-single">
                 <div className="container">
                     <div className="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="blog-detail-ct my-post-detail">
+                        <div className="col-md-12 col-sm-12 col-xs-12">
+                            <div className="blog-detail-ct my-post-detail">
                                 <h1>Visi dan Misi Kampus UMRI</h1>
-                                <span class="time">2 December 2021</span>
+                                <span className="time">2 December 2021</span>
                                 <Image src='/images/uploads/blog-detail.jpg' alt="" height={470} width={870} />
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laudantium, officiis vitae assumenda delectus exercitationem, facere ex quam voluptate beatae eligendi quaerat aut suscipit nobis! Aspernatur illum delectus cum explicabo.

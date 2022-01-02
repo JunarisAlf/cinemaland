@@ -131,10 +131,10 @@ export default function Blog({ post }) {
             <div className="page-single">
                 <div className="container">
                     <div className="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="blog-detail-ct my-post-detail">
+                        <div className="col-md-12 col-sm-12 col-xs-12">
+                            <div className="blog-detail-ct my-post-detail">
                                 <h1>{post.title}</h1>
-                                <span class="time">{post.date}</span>
+                                <span className="time">{post.date}</span>
                                 <img src={post.img} alt="" />
                                 <div dangerouslySetInnerHTML={{__html: post.content}} />
                             </div>
