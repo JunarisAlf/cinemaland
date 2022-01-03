@@ -7,7 +7,7 @@ export default function PostList({data}) {
                 
                 <div className="blog-it-infor  my-post">
                     <h3>
-                        <Link href="blogdetail.html">
+                        <Link href={'blog/' + data.slug}>
                             <a >
                                 {data.title}
                             </a>
